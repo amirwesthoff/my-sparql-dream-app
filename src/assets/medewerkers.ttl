@@ -1,0 +1,35 @@
+@prefix sogpeople: <http://www.sogeti.com/people/> .
+@prefix sogcm: <http://www.sogeti.com/competentiemodel/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix person: <http://schema.org/person#> .
+@prefix org: <http://schema.org/organization#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+sogpeople:4849
+person:givenName "Vincent"^^xsd:string ;
+person:birthDate "18-09-1973"^^xsd:date ;
+person:jobTitle "Business Analyst"^^xsd:string ;
+org:employee "Sogeti" ;
+foaf:name "Vincent Krul"^^xsd:string ;
+person:colleague sogpeople:1234 ;
+foaf:member sogpeople: .
+
+sogpeople:1234
+person:givenName "Sjaak" ;
+person:jobTitle "Unit Manager"^^xsd:string ;
+foaf:name "Sjaak Breijer" ;
+org:employee "Sogeti" .
+
+sogpeople:5678
+person:givenName "Henk" ;
+person:jobTitle "Ontwikkelaar"^^xsd:string ;
+org:employee "Ander bedrijf" .
+
+<http://example.org/book/book1> <http://purl.org/dc/elements/1.1/title> "SPARQL Tutorial" .
+
+_:a  foaf:name   "Johnny Lee Outlaw" .
+_:a  foaf:mbox   <mailto:jlow@example.com> .
+_:b  foaf:name   "Peter Goodguy" .
+_:b  foaf:mbox   <mailto:peter@example.org> .
+_:c  foaf:mbox   <mailto:carol@example.org> .

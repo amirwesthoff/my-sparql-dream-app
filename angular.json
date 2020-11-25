@@ -68,7 +68,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-dream-app:build:production",
+              "browserTarget": "my-dream-app:build:production"
             }
           }
         },
@@ -121,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my-dream-app"
+    }
+  },
+  "defaultProject": "my-dream-app",
+  "cli": {
+    "analytics": false
+  }
 }
