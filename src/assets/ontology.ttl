@@ -1,1 +1,0 @@
-@prefix sogont: <http://www.sogeti.com/ontology/> .

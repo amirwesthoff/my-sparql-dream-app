@@ -1,0 +1,246 @@
+# baseURI: http://www.sogeti.com/
+
+@prefix sogcm: <http://www.sogeti.com/competentiemodel/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sogcm:Rol
+rdf:type rdfs:Class ;
+rdf:Property sogcm:rolbeschrijving ;
+rdf:Property sogcm:VerwachteCompetenties ;
+rdf:Property sogcm:VerwachteKennisgebieden ;
+rdf:Property sogcm:aanbevolenCertificeringen .
+
+sogcm:VerwachteCompetenties
+rdf:type rdfs:Class ;
+rdf:Property sogcm:competentie ;
+rdf:Property sogcm:niveau .
+
+sogcm:VerwachteKennisgebieden
+rdf:type rdfs:Class ;
+rdf:Property sogcm:kennisgebied ;
+rdf:Property sogcm:niveau .
+
+sogcm:agileQualityCoach
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Agile Quality Coach"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:artificialIntelligenceSpecialist
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Artificial Intelligence Specialist"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:businessIntelligenceAnalyticsConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Business Intelligence & Analytics Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:businessProductivityConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Business Productivitsogetiy Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:cloudConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Cloud Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:cloudConsultantOpenSource
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Cloud Consultant Open Source"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:consultantHighTech
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Consultant High Tech"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:functioneelAdviseur
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Functioneel Adviseur"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:titel
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Informatie Regisseur"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:infrastructureConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Infrastructure Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:integrationSpecialist
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Integration Specialst"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:networkConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Network Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:oracleConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Oracle Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:performanceTestConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Performance Test Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:productOwner
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Product Owner"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:qualityArchitect
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Quality Architect"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:scrummaster
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Scrummaster"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:securityAdvisor
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Security Advisor"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:seniorImprovementCoach
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Improvement Coach"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:technologyConsultantMicrosoft
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Technology Consultant Microsoft"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:testEnvironmentConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Test Environment Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:testtoolConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Testtool Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:toscaConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Tosca Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisorc.
+
+sogcm:businessTransformationLeider
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Business Transformation Leider"^^xsd:string .
+
+sogcm:driverOfInnovation
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Driver of Innovation"^^xsd:string .
+
+sogcm:LeadBusinessIntelligenceAnalyticsConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Business Intelligence & Analytics Consultant"^^xsd:string .
+
+sogcm:leadImprovementCoach
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Improvement Coach"^^xsd:string .
+
+sogcm:leadIntegrationSpecialist
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Integration Specialist"^^xsd:string .
+
+sogcm:leadProductOwner
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Product Owner"^^xsd:string .
+
+sogcm:leadScrummaster
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Scrummaster"^^xsd:string .
+
+sogcm:titel
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Manager van Verandering"^^xsd:string .
+
+sogcm:SAPLeadBasisConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "SAP Lead Basis Consultant"^^xsd:string .
+
+sogcm:SAPLeadDevelopmentConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "SAP Lead Development Consultant"^^xsd:string .
+
+sogcm:SAPLeadFunctioneelConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "SAP Lead Functioneel Consultant"^^xsd:string .
+
+sogcm:SAPLeadIntegratieConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "SAP Lead Integratie Consultant"^^xsd:string .
+
+sogcm:seniorAgileQualityCoach
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Agile Quality Coach"^^xsd:string .
+
+sogcm:seniorBusinessProductivityConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Business Productivity Consultant"^^xsd:string .
+
+sogcm:seniorCloudConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Cloud Consultant"^^xsd:string .
+
+sogcm:seniorCloudConsultantOpenSource
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Cloud Consultant Open Source"^^xsd:string .
+
+sogcm:seniorConsultantHighTech
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Consultant High Tech"^^xsd:string .
+
+sogcm:seniorInfrastructureConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Infrastructure Consultant"^^xsd:string .
+
+sogcm:chiefBusinessIntelligenceAnalyticsConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Chief Business Intelligence & Analytics Consultant"^^xsd:string .
+
+sogcm:enterpriseAgilityConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Enterprise Agility Consultant"^^xsd:string .
+
+sogcm:leadBusinessProductivityConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Business Productivity Consultant"^^xsd:string .
+
+sogcm:leadConsultantHighTech
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Consultant High Tech"^^xsd:string .
+
+sogcm:leadManagementConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Management Consultant"^^xsd:string .
+
+sogcm:leadQualityArchitect
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Quality Architect"^^xsd:string .
+
+sogcm:leadTechnologyConsultantMicrosoft
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Lead Technology Consultant Microsoft"^^xsd:string .
+
+sogcm:masterOfTransformation
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Master of Transformation"^^xsd:string .
+
+sogcm:trustedAdvisorSecurity
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Trusted Advisor Security"^^xsd:string .

@@ -1,15 +1,12 @@
 <img src="https://www.sogeti.nl/themes/custom/sogeti_corporate/logo.svg">
 <h1>Welkom bij de RDF tool!</h1>
 
-
-<!-- logic to present query results -->
 <div *ngIf="resources">
   <div *ngFor="let i of resources.results.bindings">
     <p>{{ i.name.value }} </p>
   </div>
 </div>
 
-<!-- button to fire query -->
 <button (click)="getjobTitles()">Functies</button>
 
 <div *ngIf="jobTitles">
@@ -18,12 +15,20 @@
   </div>
 </div>
 
-<!-- button to fire query -->
 <button (click)="getSogetisten()">Sogetisten</button>
 
 <div *ngIf="sogetisten">
   <div *ngFor="let i of sogetisten.results.bindings">
-    <p>{{ i.sogetisten.value }} {{ i.wie.value }}</p>
+    <p>{{ i.organisatie.value }}</p>
   </div>
 </div>
+
+<button (click)="getRollen()">Rollen</button>
+
+<div *ngIf="rollen">
+  <div *ngFor="let i of rollen.results.bindings">
+    <p>{{ i.o.value }}</p>
+  </div>
+</div>
+
 <router-outlet></router-outlet>

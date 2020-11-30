@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { personenQuery } from '../assets/queries';
 import { jobTitleQuery } from '../assets/queries';
 import { sogetistenQuery } from '../assets/queries';
+import { rollenQuery } from '../assets/queries';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ export class AppComponent {
   resources: any;
   jobTitles: any;
   sogetisten: any;
+  rollen: any;
 
   // initialize instance of httpClient
   constructor(
@@ -62,6 +64,23 @@ export class AppComponent {
       )
       .subscribe(data => {
         this.jobTitles = data;
+      });
+  }
+
+  getRollen() {
+    const options = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin': '*'
+      })
+    };
+
+    this.http
+      .get(
+        `${this.URL}?query=${encodeURIComponent(rollenQuery)}`,
+        options
+      )
+      .subscribe(data => {
+        this.rollen = data;
       });
   }
 

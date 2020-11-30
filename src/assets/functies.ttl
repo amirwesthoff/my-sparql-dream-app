@@ -1,0 +1,23 @@
+# baseURI: http://www.sogeti.com/
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sogcm: <http://www.sogeti.com/competentiemodel/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sogcm:Functie
+rdf:type rdfs:Class .
+
+sogcm:advisor
+rdf:type sogcm:Functie .
+
+sogcm:advisorc
+rdfs:subClassOf sogcm:advisor .
+
+sogcm:advisord
+rdfs:subClassOf sogcm:advisor .
+
+sogcm:advisore
+rdfs:subClassOf sogcm:advisor .
+
