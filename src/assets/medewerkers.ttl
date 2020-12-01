@@ -9,7 +9,7 @@
 sogpeople:4849
 person:givenName "Vincent"^^xsd:string ;
 person:birthDate "18-09-1973"^^xsd:date ;
-person:jobTitle "Business Analyst"^^xsd:string ;
+person:jobTitle sogcm:businessAnalystA ;
 org:employee "Sogeti" ;
 foaf:name "Vincent Krul"^^xsd:string ;
 person:colleague sogpeople:1234 ;

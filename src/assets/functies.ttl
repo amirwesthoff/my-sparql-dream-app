@@ -21,3 +21,15 @@ rdfs:subClassOf sogcm:advisor .
 sogcm:advisore
 rdfs:subClassOf sogcm:advisor .
 
+sogcm:businessAnalyst
+rdf:type sogcm:Functie .
+
+sogcm:businessAnalystA
+rdfs:subClassOf sogcm:businessAnalyst .
+
+sogcm:businessAnalystB
+rdfs:subClassOf sogcm:businessAnalyst .
+
+sogcm:businessAnalystC
+rdfs:subClassOf sogcm:businessAnalyst .
+

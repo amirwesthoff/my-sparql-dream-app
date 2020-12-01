@@ -26,8 +26,8 @@
 <button (click)="getRollen()">Rollen</button>
 
 <div *ngIf="rollen">
-  <div *ngFor="let i of rollen.results.bindings">
-    <p>{{ i.o.value }}</p>
+  <div *ngFor="let rol of rollen.results.bindings">
+    <p>{{ rol.o.value }}</p>
   </div>
 </div>
 

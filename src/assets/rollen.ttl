@@ -62,7 +62,7 @@ rdfs:subClassOf sogcm:Rol ;
 rdf:label "Functioneel Adviseur"^^xsd:string ;
 sogcm:heeftFunctie sogcm:advisorc.
 
-sogcm:titel
+sogcm:informatieRegisseur
 rdfs:subClassOf sogcm:Rol ;
 rdf:label "Informatie Regisseur"^^xsd:string ;
 sogcm:heeftFunctie sogcm:advisorc.
@@ -139,47 +139,57 @@ sogcm:heeftFunctie sogcm:advisorc.
 
 sogcm:businessTransformationLeider
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Business Transformation Leider"^^xsd:string .
+rdf:label "Business Transformation Leider"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:driverOfInnovation
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Driver of Innovation"^^xsd:string .
+rdf:label "Driver of Innovation"^^xsd:string ;
+;sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:LeadBusinessIntelligenceAnalyticsConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Business Intelligence & Analytics Consultant"^^xsd:string .
+rdf:label "Lead Business Intelligence & Analytics Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:leadImprovementCoach
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Improvement Coach"^^xsd:string .
+rdf:label "Lead Improvement Coach"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:leadIntegrationSpecialist
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Integration Specialist"^^xsd:string .
+rdf:label "Lead Integration Specialist"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:leadProductOwner
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Product Owner"^^xsd:string .
+rdf:label "Lead Product Owner"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:leadScrummaster
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Scrummaster"^^xsd:string .
+rdf:label "Lead Scrummaster"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
-sogcm:titel
+sogcm:managerVanVerandering
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Manager van Verandering"^^xsd:string .
+rdf:label "Manager van Verandering"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:SAPLeadBasisConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "SAP Lead Basis Consultant"^^xsd:string .
+rdf:label "SAP Lead Basis Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:SAPLeadDevelopmentConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "SAP Lead Development Consultant"^^xsd:string .
-
+rdf:label "SAP Lead Development Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 sogcm:SAPLeadFunctioneelConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "SAP Lead Functioneel Consultant"^^xsd:string .
+rdf:label "SAP Lead Functioneel Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:SAPLeadIntegratieConsultant
 rdfs:subClassOf sogcm:Rol ;
@@ -187,60 +197,184 @@ rdf:label "SAP Lead Integratie Consultant"^^xsd:string .
 
 sogcm:seniorAgileQualityCoach
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Senior Agile Quality Coach"^^xsd:string .
+rdf:label "Senior Agile Quality Coach"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:seniorBusinessProductivityConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Senior Business Productivity Consultant"^^xsd:string .
+rdf:label "Senior Business Productivity Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:seniorCloudConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Senior Cloud Consultant"^^xsd:string .
+rdf:label "Senior Cloud Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:seniorCloudConsultantOpenSource
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Senior Cloud Consultant Open Source"^^xsd:string .
+rdf:label "Senior Cloud Consultant Open Source"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:seniorConsultantHighTech
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Senior Consultant High Tech"^^xsd:string .
+rdf:label "Senior Consultant High Tech"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:seniorInfrastructureConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Senior Infrastructure Consultant"^^xsd:string .
+rdf:label "Senior Infrastructure Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorManagementConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Management Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorNetworkConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Network Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorOracleConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Oracle Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorOracleConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Oracle Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorPerformanceTestConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Performance Test Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorQualityArchitect
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Quality Architect"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorSecurityAdvisor
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Security Advisor"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorTechnologyConsultantMicrosoft
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Technology Consultant Microsoft"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorTestEnvironmentConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Test Environment Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorTesttoolConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Testtool Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:seniorToscaConsultant
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Senior Tosca Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
+
+sogcm:valueChainoloog
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Value Chainoloog"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisord .
 
 sogcm:chiefBusinessIntelligenceAnalyticsConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Chief Business Intelligence & Analytics Consultant"^^xsd:string .
+rdf:label "Chief Business Intelligence & Analytics Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:enterpriseAgilityConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Enterprise Agility Consultant"^^xsd:string .
+rdf:label "Enterprise Agility Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:leadBusinessProductivityConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Business Productivity Consultant"^^xsd:string .
+rdf:label "Lead Business Productivity Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:leadConsultantHighTech
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Consultant High Tech"^^xsd:string .
+rdf:label "Lead Consultant High Tech"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:leadManagementConsultant
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Management Consultant"^^xsd:string .
+rdf:label "Lead Management Consultant"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:leadQualityArchitect
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Quality Architect"^^xsd:string .
+rdf:label "Lead Quality Architect"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:leadTechnologyConsultantMicrosoft
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Lead Technology Consultant Microsoft"^^xsd:string .
+rdf:label "Lead Technology Consultant Microsoft"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:masterOfTransformation
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Master of Transformation"^^xsd:string .
+rdf:label "Master of Transformation"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
 
 sogcm:trustedAdvisorSecurity
 rdfs:subClassOf sogcm:Rol ;
-rdf:label "Trusted Advisor Security"^^xsd:string .
+rdf:label "Trusted Advisor Security"^^xsd:string ;
+sogcm:heeftFunctie sogcm:advisore .
+
+sogcm:analist
+rdfs:subClassOf sogcm:Rol ;
+rdf:label "Analist"^^xsd:string ;
+sogcm:heeftFunctie sogcm:businessAnalystA .
+
+
+
+Business Proces Facilitator
+
+Data Management Analyst
+
+ECM Consultant
+
+Improvement Talent
+
+SAP Functioneel Consultant
+Business Analyst B
+
+Medior Business Analist
+
+Agile Analyst
+
+Digital Transformator
+
+Improvement Coach
+
+Senior Business Intelligence & Analytics Analyst
+
+Senior Data Management Analyst
+
+Senior ECM Consultant
+
+Senior SAP Functioneel Consultant
+Business Analyst C
+
+Business Analist
+
+Business Intelligence & Analytics Business Analyst
+
+Data Management Consultant
+
+ECM Consultant Expert
+
+Keten Proces Manager
+
+SAP Functioneel Consultant Expert
+
+Transformatie Regisseur
