@@ -9,9 +9,9 @@ import { Triple } from 'src/assets/triple';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'RDF App';
-
   readonly URL = '/repositories/Sogeti';
 
   medewerkers: Triple[];
@@ -23,9 +23,6 @@ export class AppComponent {
     private functiesService: FunctiesService,
     private medewerkersService: MedewerkersService,
   ) {}
-    ngOnInit(): void {
-      this.haalMedewerkersOp();
-    }
   
   haalFunctiesOp(): void {
     this.functiesService.getFuncties()
