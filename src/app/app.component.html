@@ -1,32 +1,23 @@
 <img src="https://www.sogeti.nl/themes/custom/sogeti_corporate/logo.svg">
 <h1>Welkom bij de RDF tool!</h1>
 
-<div *ngIf="resources">
-  <div *ngFor="let i of resources.results.bindings">
-    <p>{{ i.name.value }} </p>
+<div *ngIf="medewerkers">
+  <div *ngFor="let i of medewerkers.results.bindings">
+    <p>{{ i.wie.value }} werkt bij {{ i.organisatie.value }}</p>
   </div>
 </div>
 
-<button (click)="getjobTitles()">Functies</button>
+<button (click)="haalFunctiesOp()">Functies</button>
 
-<div *ngIf="jobTitles">
-  <div *ngFor="let i of jobTitles.results.bindings">
+<div *ngIf="functies">
+  <div *ngFor="let i of functies.results.bindings">
     <li>{{ i.jobTitle.value }} </li>
   </div>
 </div>
 
-<button (click)="getSogetisten()">Sogetisten</button>
-
-<div *ngIf="sogetisten">
-  <div *ngFor="let i of sogetisten.results.bindings">
-    <p>{{ i.organisatie.value }}</p>
-  </div>
-</div>
-
-<button (click)="getRollen()">Rollen</button>
-
-<div *ngIf="rollen">
-  <div *ngFor="let rol of rollen.results.bindings">
+<button (click)="haalRollenOp()">Rollen</button>
+<div *ngIf="alleRollen">
+  <div *ngFor="let rol of alleRollen.results.bindings">
     <p>{{ rol.o.value }}</p>
   </div>
 </div>

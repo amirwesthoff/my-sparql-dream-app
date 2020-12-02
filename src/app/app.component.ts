@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-// import these
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { personenQuery } from '../assets/queries';
-import { jobTitleQuery } from '../assets/queries';
-import { sogetistenQuery } from '../assets/queries';
-import { rollenQuery } from '../assets/queries';
+import { FunctiesService } from 'src/services/functies.service';
+import { RollenService } from 'src/services/rollen.service';
+import { MedewerkersService } from 'src/services/medewerkers.service';
+import { Triple } from 'src/assets/triple';
 
 @Component({
   selector: 'app-root',
@@ -12,93 +10,36 @@ import { rollenQuery } from '../assets/queries';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-dream-app';
+  title = 'RDF App';
 
-  // initialize variable for URL repo
   readonly URL = '/repositories/Sogeti';
 
-  // declare variable to hold query results
-  resources: any;
-  jobTitles: any;
-  sogetisten: any;
-  rollen: any;
+  medewerkers: Triple[];
+  functies: Triple[];
+  alleRollen: Triple[];
 
-  // initialize instance of httpClient
   constructor(
-    private http: HttpClient
+    private rollenService: RollenService,
+    private functiesService: FunctiesService,
+    private medewerkersService: MedewerkersService,
   ) {}
     ngOnInit(): void {
-      //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-      //Add 'implements OnInit' to the class.
-      this.getResources();
+      this.haalMedewerkersOp();
     }
-  // function to get RDF based on imported query
-  getResources() {
-    const options = {
-      headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': '*'
-      })
-    };
-
-    this.http
-      .get(
-        `${this.URL}?query=${encodeURIComponent(personenQuery)}`,
-        options
-      )
-      .subscribe(data => {
-        this.resources = data;
-      });
+  
+  haalFunctiesOp(): void {
+    this.functiesService.getFuncties()
+      .subscribe(data => this.functies = data);
   }
 
-  getjobTitles() {
-    const options = {
-      headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': '*'
-      })
-    };
-
-    this.http
-      .get(
-        `${this.URL}?query=${encodeURIComponent(jobTitleQuery)}`,
-        options
-      )
-      .subscribe(data => {
-        this.jobTitles = data;
-      });
+  haalRollenOp(): void {
+    this.rollenService.getAlleRollen()
+      .subscribe(data => this.alleRollen = data);
   }
 
-  getRollen() {
-    const options = {
-      headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': '*'
-      })
-    };
-
-    this.http
-      .get(
-        `${this.URL}?query=${encodeURIComponent(rollenQuery)}`,
-        options
-      )
-      .subscribe(data => {
-        this.rollen = data;
-      });
-  }
-
-  getSogetisten() {
-    const options = {
-      headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': '*'
-      })
-    };
-
-    this.http
-      .get(
-        `${this.URL}?query=${encodeURIComponent(sogetistenQuery)}`,
-        options
-      )
-      .subscribe(data => {
-        this.sogetisten = data;
-      });
+  haalMedewerkersOp(): void {
+    this.medewerkersService.getMedewerkers()
+      .subscribe(data => this.medewerkers = data);
   }
 
 }
