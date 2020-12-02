@@ -1,43 +1,42 @@
 import { Component } from '@angular/core';
-// import these
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { query } from '../assets/queries';
+import { FunctiesService } from 'src/services/functies.service';
+import { RollenService } from 'src/services/rollen.service';
+import { MedewerkersService } from 'src/services/medewerkers.service';
+import { Triple } from 'src/assets/triple';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'my-dream-app';
+  title = 'RDF App';
+  readonly URL = '/repositories/Sogeti';
 
-  // initialize variable for URL repo
-  readonly URL = '/repositories/world';
+  medewerkers: Triple[];
+  functies: Triple[];
+  alleRollen: Triple[];
 
-  // declare variable to hold query results
-  resources: any;
-
-  // initialize instance of httpClient
   constructor(
-    private http: HttpClient
+    private rollenService: RollenService,
+    private functiesService: FunctiesService,
+    private medewerkersService: MedewerkersService,
   ) {}
+  
+  haalFunctiesOp(): void {
+    this.functiesService.getFuncties()
+      .subscribe(data => this.functies = data);
+  }
 
-  // function to get RDF based on imported query
-  getResources() {
-    const options = {
-      headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': '*'
-      })
-    };
+  haalRollenOp(): void {
+    this.rollenService.getAlleRollen()
+      .subscribe(data => this.alleRollen = data);
+  }
 
-    this.http
-      .get(
-        `${this.URL}?query=${encodeURIComponent(query)}`,
-        options
-      )
-      .subscribe(data => {
-        this.resources = data;
-      });
+  haalMedewerkersOp(): void {
+    this.medewerkersService.getMedewerkers()
+      .subscribe(data => this.medewerkers = data);
   }
 
 }
